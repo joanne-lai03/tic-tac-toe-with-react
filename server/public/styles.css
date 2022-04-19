@@ -24,3 +24,8 @@
   display: grid;
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
+
+.styles {
+  width: 200px;
+  margin: 20px auto;
+}

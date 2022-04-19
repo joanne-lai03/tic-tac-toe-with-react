@@ -7,11 +7,30 @@ export default function Game () {
   const [xIsNext, setXIsNext] = useState(true)
   const winner = calculateWinner(board)
 
-  function handleClick () {
+  function handleClick (i) {
     const boardCopy = [...board]
+    // if user clicks an occupied square or if game is won, return
+    if(winner || boardCopy[i])
+      return;
+    // or put an X or O in the clicked square
+    boardCopy[i] = xIsNext ? 'X' : 'O';
+    setBoard(boardCopy)
+    setXIsNext(!xIsNext)
   }
 
-  return ( 
-    <Board squares={board} onClick={handleClick} />
+  function renderMoves () {
+    return <button onClick={() => setBoard(Array(9).fill(null))}>
+      Start Games
+    </button>
+  }
+
+  return (
+    <>
+      <Board squares={board} onClick={handleClick} />
+      <div className="styles">
+        <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
+        {renderMoves()}
+      </div>
+    </>
   )
 }
