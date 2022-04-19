@@ -9,8 +9,8 @@
 .square {
   background-color: bisque;
   border: 2px solid sienna;
-  font-size: 25px;
-  font-weight: 800;
+  font-size: 30px;
+  font-weight: 700;
   cursor: pointer;
   outline: none;
 }
@@ -25,7 +25,8 @@
   grid-template: repeat(3, 1fr) / repeat(3, 1fr);
 }
 
-.styles {
+.next-player {
   width: 200px;
   margin: 20px auto;
+  text-align: center;
 }

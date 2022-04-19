@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import calculateWinner from "../Helpers"
+import calculateWinner from "../Helper"
 import Board from "./Board";
 
 export default function Game () {
@@ -27,7 +27,7 @@ export default function Game () {
   return (
     <>
       <Board squares={board} onClick={handleClick} />
-      <div className="styles">
+      <div className="next-player">
         <p>{winner ? 'Winner: ' + winner : 'Next Player: ' + (xIsNext ? 'X' : 'O')}</p>
         {renderMoves()}
       </div>
