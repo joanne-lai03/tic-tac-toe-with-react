@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&family=Lato&family=Mochiy+Pop+P+One&display=swap');
+
+.title {
+  display: flex;
+  justify-content: center;
+  font-family: 'Mochiy Pop P One', sans-serif;
+}
+
+.square {
+  background-color: bisque;
+  border: 2px solid sienna;
+  font-size: 20px;
+  font-weight: 800;
+  cursor: pointer;
+  outline: none;
+}
+
+.board {
+  border: 4px solid sienna;
+  border-radius: 10px;
+  width: 250px;
+  height: 250px;
+  margin: 0 auto;
+  display: grid;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+}

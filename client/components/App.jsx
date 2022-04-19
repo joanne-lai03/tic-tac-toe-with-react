@@ -4,7 +4,10 @@ import Game from './Game'
 export default function App () {
 
  return (
- <Game />
+   <>
+   <h1 className='title'>Tic-Tac-Toe</h1>
+   <Game />
+   </>
  )
 }
 

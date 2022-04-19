@@ -1,8 +1,12 @@
 import React from "react";
+import Board from "./Board";
 
 export default function Game () {
+  function handleClick () {
+    
+  }
 
   return ( 
-  <div>Tic Tac Toe Game</div>
+    <Board onClick={handleClick} />
   )
 }
