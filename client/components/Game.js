@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { calculateWinner } from "../Helpers";
+import calculateWinner from "../Helpers"
 import Board from "./Board";
 
 export default function Game () {
@@ -20,7 +20,7 @@ export default function Game () {
 
   function renderMoves () {
     return <button onClick={() => setBoard(Array(9).fill(null))}>
-      Start Games
+      Play Again
     </button>
   }
 

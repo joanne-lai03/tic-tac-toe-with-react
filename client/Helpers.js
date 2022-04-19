@@ -1,4 +1,4 @@
-export function calculateWinner(squares) {
+export default function calculateWinner(squares) {
   const possibleLines = [
     [0, 1, 2],
     [3, 4, 5],
@@ -15,15 +15,6 @@ export function calculateWinner(squares) {
     if (squares[a] && squares[a] === squares[b] && squares[a] === squares[c]) {
       return squares[a]
     }
-    return null
   }
+  return null
 }
-
-export function isBoardFull(squares) {
-  for (let i = 0; i < squares.length; i++) {
-    if (squares[i] == null){
-      return false;
-    }
-  }
-  return true;
-}  
